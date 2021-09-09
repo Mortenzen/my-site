@@ -1,0 +1,11 @@
+.dropDownA {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 960px) {
+  .MuiPaper-root {
+    display: none;
+  }
+}
