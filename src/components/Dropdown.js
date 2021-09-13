@@ -1,3 +1,11 @@
+/****************************************
+*****************************************
+A PERSONALISED MATERIAL UI ONSITE EXAMPLE
+*****************************************
+****************************************/
+
+// PROPS (iconClassName, menuItems[] )
+
 import React from "react";
 import Button from "@material-ui/core/Button";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
@@ -8,6 +16,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 import "./Dropdown.css";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,7 +62,7 @@ export default function MyDropdown(props) {
   }, [open]);
 
   return (
-    <div className={classes.root}>
+    <div id="dropdownDiv" className={classes.root}>
       <div>
         <Button
           ref={anchorRef}
@@ -91,12 +100,13 @@ export default function MyDropdown(props) {
                       {props.menuItems.map((item, index) => {
                         return (
                           <a className="dropDownA" href={item.link}>
-                          <li  key={index}>
-                            <MenuItem  onClick={handleClose}>
-                              {" "}
-                              {item.title}
-                            </MenuItem>
-                          </li>
+                            <li key={index}>
+                              <MenuItem onClick={handleClose}>
+                                <Link className="dropDownA" to={item.link}>
+                                  {item.title}
+                                </Link>{" "}
+                              </MenuItem>
+                            </li>
                           </a>
                         );
                       })}

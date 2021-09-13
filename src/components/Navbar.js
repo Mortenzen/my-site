@@ -61,14 +61,18 @@ class Navbar extends Component {
     const LogedOutMenuItems = [
       {
         title: "Login",
-        link: " ",
+        link: "login",
+      },
+      {
+        title: "SignUp",
+        link: "signup",
       },
     ];
 
     return (
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/dog" className="navbar-logo">
+          <Link to="/" className="navbar-logo">
             Ramzi
           </Link>
           <div className="menu-icon" onClick={this.handleClick}>

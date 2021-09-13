@@ -1,0 +1,22 @@
+
+.hero-container {
+  background-color: rgb(195, 158, 195);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hero-text {
+  margin-top: 40px;
+  background-color: gold;
+  min-width: 200px;
+  height: 200px;
+  flex: 1 1 150px;
+}
+
+.hero-picture {
+  margin-top: 40px;
+  background-color: rgb(141, 226, 153);
+  flex: 1 1 150px;
+  min-width: 200px;
+  height: 200px;
+}
