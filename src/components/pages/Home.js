@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Home.css";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Container from "@material-ui/core/Container";
+import Hero from "../Hero.js";
 
 class Home extends Component {
   constructor(props) {
@@ -10,17 +9,7 @@ class Home extends Component {
   }
 
   render() {
-    return (
-      <React.Fragment>
-        <CssBaseline />
-        <Container style={{ backgroundColor: "black", maxWidth:"100%"}}>
-        <div className="hero-container">
-        <div className="hero-text"></div>
-        <div className="hero-picture"></div>
-        </div>
-        </Container>
-      </React.Fragment>
-    );
+    return <Hero />;
   }
 }
 

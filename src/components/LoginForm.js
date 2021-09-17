@@ -42,6 +42,10 @@ export default function SignIn(props) {
     props.onPasswordChange(e.target.value);
   }
 
+  function onSubmit(){
+    props.onSubmit();
+  }
+
   return (
     <Container className="signInContainer" component="main" maxWidth="xs">
       <CssBaseline />
@@ -65,6 +69,7 @@ export default function SignIn(props) {
             autoComplete="email"
             autoFocus
           />
+          <div style={{ color: "red" }}>{props.errors.email}</div>
           <TextField
             onChange={passwordUplifting}
             variant="outlined"
@@ -78,7 +83,8 @@ export default function SignIn(props) {
             autoComplete="current-password"
           />
           <Button
-            type="submit"
+            onClick={onSubmit}
+            //type="submit"
             fullWidth
             variant="contained"
             color="primary"

@@ -1,6 +1,7 @@
 html,
 body {
-  overflow-x: hidden !important;
+ /* overflow-x: hidden !important;*/
+  margin: 0;
 }
 
 * {
@@ -11,10 +12,9 @@ body {
 }
 
 #root {
-  background-color: #fffafafa;
   position: relative;
   min-height: 100vh;
-  padding-bottom: 160px;
+  padding-bottom: 279px;
 }
 
 .footer-container {

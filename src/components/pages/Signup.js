@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Signup.css";
 import SignUp from "../SignupForm.js";
+import axios from "axios";
 
 class Signup extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Signup extends Component {
       firstname: "",
       lastname: "",
       errors: {},
-      isValid: false,
+      isValid: true,
     };
 
     // Functions for Lifting up satets
@@ -45,8 +46,36 @@ class Signup extends Component {
   }
 
   onSubmit() {
+  
+    var result;
+
+    const userObject = {
+      name: this.state.firstname,
+      email: this.state.email,
+      password: this.state.password,
+    };
+
     if (this.validate()) {
-      alert(JSON.stringify(this.state));
+      axios
+        .post("https://ramziproject.co.uk/api/reactInsert", userObject)
+        .then((res) => {
+          result = res.data;
+          if (result === "success") {
+            //PROBABLY INCORRECT !!!
+            this.setState({
+              name: "",
+              email: "",
+              password: "",
+              passwordMatch: "",
+            });
+            this.props.history.push("/login");
+          }
+          console.log(res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+          alert("Email is already in use");
+        });
     }
   }
 
@@ -57,7 +86,7 @@ class Signup extends Component {
     let password = this.state.password;
     let passwordMatch = this.state.passwordConfirm;
     let errors = {};
-    let isValid = false;
+    let isValid = true;
 
     if (!firstName) {
       isValid = false;
@@ -114,7 +143,6 @@ class Signup extends Component {
           onSubmit={this.onSubmit}
           errors={this.state.errors}
         />
-        <div>LOL {this.state.errors.email}</div>
       </div>
     );
   }

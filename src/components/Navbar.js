@@ -7,32 +7,39 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      logedIn: false,
+      signedIn: false,
       menuIconState: false,
     };
 
     this.handleClick = this.handleClick.bind(this);
-    //this.login = this.login.bind(this);
+    this.onLogOut = this.onLogOut.bind(this);
   }
-
-  /* //WHAT IS WRONG WITH THIS????????????
-  login() {
-    this.setState( {logedIn : !this.state.logedIn});
-  }
-
-   <button onClick={this.login}>lol</button>
-   
-*/
 
   handleClick() {
     this.setState({ menuIconState: !this.state.menuIconState });
   }
 
+  onLogOut() {
+    localStorage.setItem("token", null);
+  }
+
+  componentDidMount = () => {
+    //alert(localStorage.getItem("token"));
+    //alert(this.state.signedIn);
+
+    let temp = localStorage.getItem("token");
+    if (!(temp === "null")) {
+      this.setState({ signedIn: true });
+    } else {
+      this.setState({ signedIn: false });
+    }
+  };
+
   render() {
     const menuItems = [
       {
         className: "nav-links",
-        url: "www.google.com",
+        url: "/login",
         title: "PROJETCS",
       },
       {
@@ -54,7 +61,7 @@ class Navbar extends Component {
       },
       {
         title: "Logout",
-        link: " ",
+        link: "logout",
       },
     ];
 
@@ -98,7 +105,7 @@ class Navbar extends Component {
             })}
             <li>
               <Link className="nav-links log-in-out">
-                {this.state.logedIn ? "LOGOUT" : "LOGIN"}
+                {this.state.signedIn ? "LOGOUT" : "LOGIN"}
               </Link>
             </li>
           </ul>
@@ -106,12 +113,12 @@ class Navbar extends Component {
           {/* This is a customised Material Ui dropdown menu.*/}
           <MyDropdown
             iconClassName={
-              this.state.logedIn ? "far fa-user" : "fas fa-sign-in-alt"
+              this.state.signedIn ? "far fa-user" : "fas fa-sign-in-alt"
             }
             menuItems={
-              this.state.logedIn ? logedInMenuItems : LogedOutMenuItems
+              this.state.signedIn ? logedInMenuItems : LogedOutMenuItems
             }
-            isLogedIn={this.state.logedIn}
+            isLogedIn={this.state.signedIn}
           />
         </div>
       </nav>
