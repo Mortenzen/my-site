@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Home.css";
 import Hero from "../Hero.js";
+import Aboutme from "../Aboutme.js";
 
 class Home extends Component {
   constructor(props) {
@@ -9,7 +10,12 @@ class Home extends Component {
   }
 
   render() {
-    return <Hero />;
+    return (
+      <>
+        <Hero />
+        <Aboutme />
+      </>
+    );
   }
 }
 

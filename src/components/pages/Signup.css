@@ -1,3 +1,6 @@
 .signupPage {
-  min-height: 750px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
