@@ -1,6 +1,5 @@
 html,
 body {
- /* overflow-x: hidden !important;*/
   margin: 0;
 }
 
@@ -12,13 +11,25 @@ body {
 }
 
 #root {
+  padding-top: 60px;
+  margin: 0;
   position: relative;
-  min-height: 100vh;
-  padding-bottom: 279px;
+  /*min-height: 100vh;
+  padding-bottom: 610px;*/
+  background-color: antiquewhite;
+  z-index: 0;
 }
 
-.footer-container {
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
+/*
+@media screen and (min-width: 576px) {
+  #root {
+    padding-bottom: 313px;
+  }
 }
+
+@media screen and (min-width: 821px) {
+  #root {
+    padding-bottom: 281px;
+  }
+}
+*/
