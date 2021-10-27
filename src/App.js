@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
 import Logout from "./components/pages/Logout";
+import Education from "./components/pages/Education";
+import Todo from "./components/pages/Todo";
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/education" exact component={Education} />
           <Route path="/login" exact component={Login} />
           <Route path="/logout" exact component={Logout} />
           <Route path="/signup" exact component={Signup} />
+          <Route path="/todo" exact component={Todo} />
         </Switch>
         <Footer className="footer" />
       </Router>

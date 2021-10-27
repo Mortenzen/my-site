@@ -39,8 +39,8 @@ class Navbar extends Component {
     const menuItems = [
       {
         className: "nav-links",
-        url: "/login",
-        title: "PROJETCS",
+        url: "/education",
+        title: "EDUCATION",
       },
       {
         className: "nav-links",
@@ -56,8 +56,8 @@ class Navbar extends Component {
 
     const logedInMenuItems = [
       {
-        title: "User",
-        link: " ",
+        title: "ToDo",
+        link: "/todo",
       },
       {
         title: "Logout",

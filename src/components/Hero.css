@@ -1,4 +1,3 @@
-
 video {
   min-height: 900px;
   object-fit: cover;
@@ -10,8 +9,9 @@ video {
 }
 
 .hero-container {
+  font-family: "Saira", sans-serif;
   text-align: center;
-  min-height: 50vh;
+  min-height: 450px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,6 @@ video {
 .hero-container h1 {
   color: #fff;
   font-size: 110px;
- 
 }
 
 .hero-container p {
@@ -33,9 +32,8 @@ video {
   font-size: 32px;
 }
 
-
 @media screen and (max-width: 960px) {
-  .hero-container  h1 {
+  .hero-container h1 {
     font-size: 70px;
     margin-top: -150px;
   }

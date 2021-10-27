@@ -6,8 +6,8 @@ function Hero(props) {
 
     <div className='hero-container'>
     <video src="/video/molly.mp4" autoPlay loop muted />
-    <h1>Thank You for Wisiting My Site</h1>
-    <p>What are you waiting for?</p>
+    <h1>Thank You for Visiting My Site</h1>
+ 
     
      {/*
     <div className="hero-container">

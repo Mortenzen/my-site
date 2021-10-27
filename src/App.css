@@ -3,11 +3,14 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Saira", sans-serif;
 }
 
 #root {
@@ -16,7 +19,7 @@ body {
   position: relative;
   /*min-height: 100vh;
   padding-bottom: 610px;*/
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
   z-index: 0;
 }
 

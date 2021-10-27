@@ -1,0 +1,13 @@
+.todo-wrapper {
+  
+  display: grid;
+  place-items: center;
+  width: 100%;
+  
+}
+
+.table-wrapper {
+  margin: 40px 0px 40px 0px;
+  min-width: 200px;
+  max-width: 1400px;
+}
