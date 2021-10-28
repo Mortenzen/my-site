@@ -1,0 +1,58 @@
+.pres-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 0px 0px 0px;
+}
+
+.pres-picture {
+  margin: 40px 20px 40px 20px;
+  min-height: 300px;
+  min-width: 200px;
+  max-width: 800px;
+}
+
+.pres-description {
+  font-family: Ubuntu, sans-serif;
+  margin: 40px 20px 80px 20px;
+  min-height: 30px;
+  min-width: 200px;
+  max-width: 800px;
+}
+
+.pres-description   p {
+  margin-top: 30px;
+}
+
+.pres-description   h3 {
+  margin-top: 40px;
+}
+.pres-wrapper .carousel {
+  max-width: 800px;
+}
+
+@media screen and (max-width: 375px) {
+  .pres-picture {
+    margin-left: 0;
+    margin-right: 0;
+    margin: 20px 0px 20px 0px;
+  }
+
+  .pres-description {
+    font-family: Ubuntu, sans-serif;
+    margin: 20px 20px 20px 20px;
+  }
+
+  
+}
+
+@media screen and (max-width: 281px) {
+  .pres-picture {
+    max-width: 260px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
