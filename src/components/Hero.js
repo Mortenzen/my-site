@@ -5,7 +5,7 @@ function Hero(props) {
   return (
 
     <div className='hero-container'>
-    <video src="/video/molly.mp4" autoPlay loop muted />
+    <video src="/video/molly.mp4" autoPlay loop muted playsinline/>
     <h1>Thank You for Visiting My Site</h1>
  
     
