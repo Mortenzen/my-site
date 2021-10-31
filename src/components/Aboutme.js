@@ -17,7 +17,7 @@ class Aboutme extends Component {
     //alert(this.state.signedIn);
 
     let temp = localStorage.getItem("token");
-    if (!(temp === "null")) {
+    if (!(temp === null)) {
       this.setState({ signedIn: true });
     } else {
       this.setState({ signedIn: false });
