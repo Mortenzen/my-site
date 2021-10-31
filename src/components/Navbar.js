@@ -28,7 +28,7 @@ class Navbar extends Component {
     //alert(this.state.signedIn);
 
     let temp = localStorage.getItem("token");
-    if (!(temp === null)) {
+    if (!(temp === "null") && !(temp === null)) {
       this.setState({ signedIn: true });
     } else {
       this.setState({ signedIn: false });
@@ -45,12 +45,12 @@ class Navbar extends Component {
       {
         className: "nav-links",
         url: "www.google.com",
-        title: "EDUCATION",
+        title: "EXPERIENCE",
       },
       {
         className: "nav-links",
-        url: "www.google.com",
-        title: "HOBBIES",
+        url: "/login",
+        title: "LOGIN",
       },
     ];
 
