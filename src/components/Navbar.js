@@ -49,8 +49,8 @@ class Navbar extends Component {
       },
       {
         className: "nav-links",
-        url: "/login",
-        title: "LOGIN",
+        url: "/todo",
+        title: "TODO",
       },
     ];
 
@@ -104,7 +104,7 @@ class Navbar extends Component {
               );
             })}
             <li>
-              <Link className="nav-links log-in-out">
+              <Link className="nav-links log-in-out"  to= {this.state.signedIn ? "/logout" : "/login"}>
                 {this.state.signedIn ? "LOGOUT" : "LOGIN"}
               </Link>
             </li>

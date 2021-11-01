@@ -54,7 +54,7 @@ class Aboutme extends Component {
             <div className="card-wrapper">
               <MediaCard
                 className="card"
-                content={"fadfwea efwafjweoweaj jifowea jfiweafewa feawfewaf"}
+                content={"fadfwea efwafjweoweaj jifowea jfiweafewa "}
                 title={"Education"}
                 link={
                   "https://www.kuka.com/-/media/kuka-corporate/images/products/systems/anlagenbau-automotive_header.jpg?rev=a96a65dcff084434bff9c5478c13903a&w=1400&hash=B2788946B9C7245F8AF262F2A067BD11"
@@ -65,7 +65,7 @@ class Aboutme extends Component {
               <a href={this.state.signedIn ? "/todo" : "/login"}>
                 <MediaCard
                   className="card"
-                  content={"fadfwea efwafjweoweaj jifowea jfiweafewa feawfewaf"}
+                  content={"fadfwea efwafjweoweaj jifowea jfiweafewa "}
                   title={"Todo List Application"}
                   link={
                     "https://www.chevening.org/wp-content/uploads/2019/07/Queens-Building.jpg"
