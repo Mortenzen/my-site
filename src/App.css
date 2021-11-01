@@ -15,24 +15,13 @@ a {
 
 #root {
   padding-top: 60px;
-  margin: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100%;
   position: relative;
-  /*min-height: 100vh;
-  padding-bottom: 610px;*/
+  backface-visibility: hidden;
   background-color: rgb(255, 255, 255);
   z-index: 0;
 }
-
-/*
-@media screen and (min-width: 576px) {
-  #root {
-    padding-bottom: 313px;
-  }
-}
-
-@media screen and (min-width: 821px) {
-  #root {
-    padding-bottom: 281px;
-  }
-}
-*/
