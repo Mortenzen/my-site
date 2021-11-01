@@ -1,12 +1,15 @@
 .todo-wrapper {
-  
+  background-image: url("../SeekPng.com_office-people-png_684786.png");
+  background-repeat: no-repeat, repeat;
+ 
+  background-size: 100%;
   display: grid;
   place-items: center;
   width: 100%;
-  
+  flex: 1 1;
 }
 
-.table-wrapper {
+.table-wrapper { background-color: #fffffff3;
   margin: 40px 0px 40px 0px;
   min-width: 200px;
   max-width: 1400px;

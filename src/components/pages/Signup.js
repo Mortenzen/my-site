@@ -46,7 +46,6 @@ class Signup extends Component {
   }
 
   onSubmit() {
-  
     var result;
 
     const userObject = {
