@@ -11,7 +11,6 @@
 }
 
 .intro {
-  
   font-family: Ubuntu, sans-serif;
   text-align: center;
   min-height: 20vh;
@@ -38,7 +37,6 @@
   margin: 10px;
   margin-bottom: 20px;
 }
-
 
 .intro-h4 {
   margin: 10px;
@@ -138,10 +136,10 @@
   margin: 5px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 350px) {
   .card-wrapper {
-    min-width: 400px;
-    margin: 20px;
+    min-width: 330px;
+    margin: 20px 0px 20px 0px;
   }
 }
 
@@ -152,9 +150,23 @@
   }
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 500px) {
   .card-wrapper {
-    min-width: 330px;
+    min-width: 450px;
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .card-wrapper {
+    min-width: 500px;
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .card-wrapper {
+    min-width: 550px;
     margin: 20px;
   }
 }

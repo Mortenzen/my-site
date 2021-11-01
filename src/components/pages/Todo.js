@@ -13,6 +13,7 @@ class Todo extends Component {
       toDoArray: [],
       selectedArray: [],
       newToDo: "",
+      signedIn: false,
     };
 
     this.onChangeCreateToDo = this.onChangeCreateToDo.bind(this);
@@ -28,6 +29,48 @@ class Todo extends Component {
   currentlySelected(selection) {
     this.setState({ selectedArray: selection });
   }
+
+  componentDidMount = () => {
+    //alert(localStorage.getItem("token"));
+    //alert(this.state.signedIn);
+
+    let temp = localStorage.getItem("token");
+    if (!(temp === "null") && !(temp === null)) {
+      this.setState({ signedIn: true });
+    } else {
+      this.setState({ signedIn: false });
+      this.props.history.push("/login");
+      window.location.reload();
+      console.log(myThis.state.signedIn + " lol")
+    }
+
+
+
+    let myThis = this;
+
+    function myGet() {
+      if (localStorage.getItem("token") === "null") {
+        myThis.setState({
+          name: <h1>Please log in to see your ToDo list :)</h1>,
+        });
+      } else {
+        axios.get("https://ramziproject.co.uk/api/reactGetUser").then(
+          (res) => {
+            console.log(res.data);
+            myThis.setState({ userData: res.data });
+            myThis.setState({ name: "Hi " + myThis.state.userData.name });
+            myThis.setState({ toDoArray: myThis.state.userData.toDo });
+          },
+          (err) => {
+            console.log(err);
+          }
+        );
+      }
+    }
+
+    myGet();
+
+  };
 
   onSubmit(e) {
     if (this.state.newToDo === "") {
@@ -85,33 +128,7 @@ class Todo extends Component {
 
     mySender(this.state.selectedArray);
   }
-
-  componentDidMount = () => {
-    let myThis = this;
-
-    function myGet() {
-      if (localStorage.getItem("token") === "null") {
-        myThis.setState({
-          name: <h1>Please log in to see your ToDo list :)</h1>,
-        });
-      } else {
-        axios.get("https://ramziproject.co.uk/api/reactGetUser").then(
-          (res) => {
-            console.log(res.data);
-            myThis.setState({ userData: res.data });
-            myThis.setState({ name: "Hi " + myThis.state.userData.name });
-            myThis.setState({ toDoArray: myThis.state.userData.toDo });
-          },
-          (err) => {
-            console.log(err);
-          }
-        );
-      }
-    }
-
-    myGet();
-  };
-
+  
   render() {
     const columns = [
       { field: "id", headerName: "ID", width: 120 },
@@ -144,46 +161,46 @@ class Todo extends Component {
         </div>
 
         <div className="input-wrapper">
-        <form id="deleteToDo" onSubmit={this.onSubmitDelete}>
-          <div className="form-group">
-            <input
-              id="deleteToDoBt"
-              style={{ maxWidth: "200px", minWidth: "200px" }}
-              type="submit"
-              value="Delete Selected"
-              className="btn btn-success btn-block"
-            />
-          </div>
-        </form>
-        
-        <form id="newToDo" onSubmit={this.onSubmit}>
-          <div
-            className="card"
-            style={{ maxWidth: "600px", minWidth: "600px" }}
-          >
-            <h3 className="center">NewToDo</h3>
-            <textarea
-              id="textBox"
-              type="field"
-              name="name"
-              value={this.state.newToDo}
-              onChange={this.onChangeCreateToDo}
-              className="form-control"
-              id="name"
-              cols="40"
-              rows="3"
-            ></textarea>
-          </div>
-          <div className="form-group">
-            <input
-              id="newToDoBt"
-              style={{ maxWidth: "400px", minWidth: "400px" }}
-              type="submit"
-              value="Add New ToDo element"
-              className="btn btn-success btn-block"
-            />
-          </div>
-        </form>
+          <form id="deleteToDo" onSubmit={this.onSubmitDelete}>
+            <div className="form-group">
+              <input
+                id="deleteToDoBt"
+                style={{ maxWidth: "200px", minWidth: "200px" }}
+                type="submit"
+                value="Delete Selected"
+                className="btn btn-success btn-block"
+              />
+            </div>
+          </form>
+
+          <form id="newToDo" onSubmit={this.onSubmit}>
+            <div
+              className="card"
+              style={{ maxWidth: "600px", minWidth: "600px" }}
+            >
+              <h3 className="center">NewToDo</h3>
+              <textarea
+                id="textBox"
+                type="field"
+                name="name"
+                value={this.state.newToDo}
+                onChange={this.onChangeCreateToDo}
+                className="form-control"
+                id="name"
+                cols="40"
+                rows="3"
+              ></textarea>
+            </div>
+            <div className="form-group">
+              <input
+                id="newToDoBt"
+                style={{ maxWidth: "400px", minWidth: "400px" }}
+                type="submit"
+                value="Add New ToDo element"
+                className="btn btn-success btn-block"
+              />
+            </div>
+          </form>
         </div>
       </div>
     );
