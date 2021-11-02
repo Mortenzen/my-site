@@ -1,16 +1,69 @@
 .todo-wrapper {
-  background-image: url("../SeekPng.com_office-people-png_684786.png");
-  background-repeat: no-repeat, repeat;
- 
-  background-size: 100%;
   display: grid;
   place-items: center;
   width: 100%;
   flex: 1 1;
 }
 
-.table-wrapper { background-color: #fffffff3;
+.table-wrapper {
   margin: 40px 0px 40px 0px;
   min-width: 200px;
-  max-width: 1400px;
+  max-width: 1800px;
+}
+
+.input-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.new-todo {
+  display: grid;
+  place-items: center;
+}
+
+#newToDo {
+  display: grid;
+  place-items: center;
+}
+
+.button-newtodo {
+  background-color: #598f62;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-deletetodo {
+  background-color: #8a4848;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  resize: vertical;
+  width: 270px;
+}
+
+@media screen and (min-width: 500px) {
+  textarea {
+    width: 400px;
+  }
 }

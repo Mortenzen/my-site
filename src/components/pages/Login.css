@@ -2,7 +2,20 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   flex: 1;
-  /* 1 and it will fill whole space left if no flex value are set to other children*/
+}
+
+.loginPage .MuiContainer-maxWidthXs {
+  background-color: #fffffff1;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .loginPage {
+    background-image: url("../SeekPng.com_office-people-png_684786.png");
+    background-repeat: no-repeat, repeat;
+    background-color: rgb(243, 246, 249);
+    background-size: 100%;
+  }
 }

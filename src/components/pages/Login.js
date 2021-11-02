@@ -86,7 +86,7 @@ class Login extends Component {
     return (
       <div className="loginPage">
         {/*Customised MaterialUI example component. Input data is lifted up.*/}
-        <SignIn
+        <SignIn className="login-box"
           onEmailChange={this.onEmailChange}
           onPasswordChange={this.onPasswordChange}
           onSubmit={this.onSubmit}
