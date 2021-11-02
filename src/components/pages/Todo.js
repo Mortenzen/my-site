@@ -41,10 +41,8 @@ class Todo extends Component {
       this.setState({ signedIn: false });
       this.props.history.push("/login");
       window.location.reload();
-      console.log(myThis.state.signedIn + " lol")
+      console.log(myThis.state.signedIn + " lol");
     }
-
-
 
     let myThis = this;
 
@@ -69,7 +67,6 @@ class Todo extends Component {
     }
 
     myGet();
-
   };
 
   onSubmit(e) {
@@ -128,7 +125,7 @@ class Todo extends Component {
 
     mySender(this.state.selectedArray);
   }
-  
+
   render() {
     const columns = [
       { field: "id", headerName: "ID", width: 120 },
@@ -161,6 +158,29 @@ class Todo extends Component {
         </div>
 
         <div className="input-wrapper">
+          <form id="newToDo" onSubmit={this.onSubmit}>
+            <h3 className="center">NewToDo</h3>
+            <textarea
+              id="textBox"
+              name="name"
+              value={this.state.newToDo}
+              onChange={this.onChangeCreateToDo}
+              className="form-control"
+              id="name"
+              cols="40"
+              rows="3"
+            ></textarea>
+
+       
+              <input
+                id="newToDoBt"
+         
+                type="submit"
+                value="Add New ToDo element"
+                className="button-newtodo"
+              />
+  
+          </form>
           <form id="deleteToDo" onSubmit={this.onSubmitDelete}>
             <div className="form-group">
               <input
@@ -168,36 +188,7 @@ class Todo extends Component {
                 style={{ maxWidth: "200px", minWidth: "200px" }}
                 type="submit"
                 value="Delete Selected"
-                className="btn btn-success btn-block"
-              />
-            </div>
-          </form>
-
-          <form id="newToDo" onSubmit={this.onSubmit}>
-            <div
-              className="card"
-              style={{ maxWidth: "600px", minWidth: "600px" }}
-            >
-              <h3 className="center">NewToDo</h3>
-              <textarea
-                id="textBox"
-                type="field"
-                name="name"
-                value={this.state.newToDo}
-                onChange={this.onChangeCreateToDo}
-                className="form-control"
-                id="name"
-                cols="40"
-                rows="3"
-              ></textarea>
-            </div>
-            <div className="form-group">
-              <input
-                id="newToDoBt"
-                style={{ maxWidth: "400px", minWidth: "400px" }}
-                type="submit"
-                value="Add New ToDo element"
-                className="btn btn-success btn-block"
+                className="button-deletetodo"
               />
             </div>
           </form>

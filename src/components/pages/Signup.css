@@ -5,3 +5,18 @@
   justify-content: center;
   flex: 1;
 }
+
+.signupPage .MuiContainer-maxWidthXs {
+  background-color: #fffffff1;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  .signupPage {
+    background-image: url("../SeekPng.com_office-people-png_684786.png");
+    background-repeat: no-repeat, repeat;
+    background-color: rgb(243, 246, 249);
+    background-size: 100%;
+  }
+}
