@@ -13,6 +13,11 @@ class Navbar extends Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.onLogOut = this.onLogOut.bind(this);
+    this.linkClick = this.linkClick.bind(this);
+  }
+
+  linkClick() {
+    this.setState({ menuIconState: false });
   }
 
   handleClick() {
@@ -97,14 +102,18 @@ class Navbar extends Component {
             {menuItems.map((item, index) => {
               return (
                 <li key={index}>
-                  <Link className={item.className} to={item.url}>
+                  <Link className={item.className} to={item.url}  onClick={this.linkClick}>
                     {item.title}
+                   
                   </Link>
                 </li>
               );
             })}
             <li>
-              <Link className="nav-links log-in-out"  to= {this.state.signedIn ? "/logout" : "/login"}>
+              <Link
+                className="nav-links log-in-out"
+                to={this.state.signedIn ? "/logout" : "/login"}
+              >
                 {this.state.signedIn ? "LOGOUT" : "LOGIN"}
               </Link>
             </li>

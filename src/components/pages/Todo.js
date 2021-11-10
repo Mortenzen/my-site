@@ -41,7 +41,6 @@ class Todo extends Component {
       this.setState({ signedIn: false });
       this.props.history.push("/login");
       window.location.reload();
-      console.log(myThis.state.signedIn + " lol");
     }
 
     let myThis = this;
@@ -54,7 +53,7 @@ class Todo extends Component {
       } else {
         axios.get("https://ramziproject.co.uk/api/reactGetUser").then(
           (res) => {
-            console.log(res.data);
+    
             myThis.setState({ userData: res.data });
             myThis.setState({ name: "Hi " + myThis.state.userData.name });
             myThis.setState({ toDoArray: myThis.state.userData.toDo });
@@ -88,7 +87,6 @@ class Todo extends Component {
             this.setState({ newtoDo: "" });
             //this.props.history.push('/login');
           }
-          console.log(res.data);
         })
         .catch((error) => {
           console.log(error);
@@ -114,7 +112,7 @@ class Todo extends Component {
           result = res.data;
           if (result === "success") {
           }
-          console.log(res.data);
+        
         })
         .catch((error) => {
           console.log(error);
