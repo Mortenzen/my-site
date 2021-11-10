@@ -7,6 +7,7 @@ import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
 import Logout from "./components/pages/Logout";
 import Education from "./components/pages/Education";
+import Experience from "./components/pages/Experience";
 import Todo from "./components/pages/Todo";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/education" exact component={Education} />
+          <Route path="/experience" exact component={Experience} />
           <Route path="/login" exact component={Login} />
           <Route path="/logout" exact component={Logout} />
           <Route path="/signup" exact component={Signup} />

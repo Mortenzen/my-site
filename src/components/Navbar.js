@@ -44,7 +44,7 @@ class Navbar extends Component {
       },
       {
         className: "nav-links",
-        url: "www.google.com",
+        url: "/experience",
         title: "EXPERIENCE",
       },
       {

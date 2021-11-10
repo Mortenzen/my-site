@@ -1,0 +1,128 @@
+.experience-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.section-divider3 {
+  position: relative;
+}
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.section-divider3:before {
+  color: rgb(170, 170, 170);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0b1";
+  width: 6.5rem;
+  height: 6.5rem;
+  background: #2c3e50;
+  border-radius: 100%;
+  position: absolute;
+  top: -3.25rem;
+  left: calc(50% - 3.25rem);
+  color: rgba(#2980b9, 0.5);
+  line-height: 5.4rem;
+  text-indent: 1.7rem;
+  font-size: 3rem;
+}
+
+.lower-section3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(#2980b9, 0.5);
+}
+
+.lower-section3 {
+  font-family: "Saira", sans-serif;
+  margin-top: 0px;
+  min-height: 20vh;
+  width: 100%;
+  background: #2c3e50;
+  display: grid;
+  place-items: center;
+}
+
+.exp-h3 {
+  margin-top: 80px;
+  padding-bottom: 20px;
+  color: aliceblue;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+
+.reactplayer-wrapper {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: #2c3e50;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 0px 0px 0px;
+}
+
+.player-text {
+  color: aliceblue;
+  font-family: "Ubuntu", sans-serif;
+  margin: 40px 20px 80px 20px;
+  min-height: 30px;
+  min-width: 200px;
+  max-width: 800px;
+}
+
+.player-text h1 {
+  font-family: "Saira", sans-serif;
+  max-width: 700px;
+}
+
+.react-player {
+  min-height: 300px;
+  min-width: 200px;
+  max-width: 800px;
+}
+
+@media screen and (max-width: 301px) {
+  .reactplayer-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .react-player {
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .react-player {
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .react-player {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .react-player {
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .react-player {
+    max-width: 300px;
+  }
+}

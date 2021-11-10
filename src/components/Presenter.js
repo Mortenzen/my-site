@@ -31,8 +31,10 @@ class Presenter extends Component {
           </Carousel>
         </div>
         <div className="pres-description">
-          <h1>{seter.title}</h1> <h3>{seter.intro}</h3>
-          <p>{seter.content}</p>
+          <h1>{seter.title}</h1> <h3>{seter.intro1}</h3>
+          <p>{seter.content1}</p>
+          <h3>{seter.intro2}</h3>
+          <p>{seter.content2}</p>
         </div>
       </div>
     );
