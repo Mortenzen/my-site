@@ -10,16 +10,18 @@ function Footer() {
           <div class="footer-link-items">
             <h2>About Me</h2>
 
-            <Link to="/">Testimonials</Link>
-            <Link to="/">Careers</Link>
-            <Link to="/">Investors</Link>
+            <Link to="/education">Education</Link>
+            <Link to="/experience">Experience</Link>
+            <Link to="/todo">ToDo</Link>
           </div>
         </div>
 
         <div className="footer-link-wrapper">
           <div class="footer-link-items">
             <h2>Contact Me</h2>
-            <Link to="/">Contact</Link>
+            <a href="https://www.linkedin.com/in/ramzi-nofal-914624156/">
+              Contact
+            </a>
           </div>
         </div>
 

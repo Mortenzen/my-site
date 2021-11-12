@@ -45,8 +45,7 @@ class Education extends Component {
         <Presenter presenterSeter={presenterSeter1} />
         <div class="lower-section2 section-divider2">
           <h3 className="study-h3">
-            Here you will find some information about the technical side of the
-            website.
+          I am happy that I had the opportunity to study in two countries.
           </h3>
         </div>
       </div>

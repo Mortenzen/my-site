@@ -17,7 +17,7 @@ class Aboutme extends Component {
     //alert(this.state.signedIn);
 
     let temp = localStorage.getItem("token");
-    if (!(temp === "null") && !(temp === null)){
+    if (!(temp === "null") && !(temp === null)) {
       this.setState({ signedIn: true });
     } else {
       this.setState({ signedIn: false });
@@ -28,15 +28,25 @@ class Aboutme extends Component {
     return (
       <div className="aboutme-wrapper">
         <div className="intro">
-          <h1 className="intro-h1">Hello, my name is Ramzi.</h1>
-          <h2 className="intro-h2">
-            I am currently trying to start my career as a web deweloper. I made
-            this website to add a little extra information to my CV.
-          </h2>
-          <h3 className="intro-h3">
-            If you had time, you could also use the signup/login option to try
-            out the todo-list.
-          </h3>
+          
+            <h1 className="intro-h1">Hello, my name is Ramzi.</h1><div className="intro-text">
+            <h2 className="intro-h2">
+              I am currently trying to start my career as a web developer. I
+              created this website to provide a little extra information to my
+              CV.
+            </h2>
+            <p className="intro-p">
+              Although I use component libraries most of the components are made
+              by me with HTML and CSS. The back-end NodeJS application is being
+              rewritten right now. The updates will include the access token and
+              refresh token authentication method (now, I use only a jwt token
+              stored locally) and basic updates (server tells the frontend when
+              data is changed etc.) to have a properly functioning application.
+              As I finish the new features I will share the Github repository.
+              Now If you had time, you could also use the signup/login option to
+              try the todo-list.
+            </p>
+          </div>
           <div className="cards-wrapper">
             <div className="card-wrapper">
               <a href="/education">
@@ -45,33 +55,27 @@ class Aboutme extends Component {
                   className="card"
                   content={"My education with details"}
                   title={"Education"}
-                  link={
-                    "https://www.chevening.org/wp-content/uploads/2019/07/Queens-Building.jpg"
-                  }
+                  link={"./education_1.png"}
                 />
               </a>
             </div>
             <div className="card-wrapper">
-            <a href="/experience">
-              <MediaCard
-                className="card"
-                content={"fadfwea efwafjweoweaj jifowea jfiweafewa "}
-                title={"Related experience"}
-                link={
-                  "https://www.kuka.com/-/media/kuka-corporate/images/products/systems/anlagenbau-automotive_header.jpg?rev=a96a65dcff084434bff9c5478c13903a&w=1400&hash=B2788946B9C7245F8AF262F2A067BD11"
-                }
-              />
+              <a href="/experience">
+                <MediaCard
+                  className="card"
+                  content={"Working exprerience "}
+                  title={"Experience"}
+                  link={"./IMG_1548.JPG"}
+                />
               </a>
             </div>
             <div className="card-wrapper">
               <a href={this.state.signedIn ? "/todo" : "/login"}>
                 <MediaCard
                   className="card"
-                  content={"fadfwea efwafjweoweaj jifowea jfiweafewa "}
+                  content={"A small todo list applicetion to test the backend"}
                   title={"Todo List Application"}
-                  link={
-                    "../SeekPng.com_office-people-png_684786.png"
-                  }
+                  link={"../SeekPng.com_office-people-png_684786.png"}
                 />
               </a>
             </div>
