@@ -102,9 +102,12 @@ class Navbar extends Component {
             {menuItems.map((item, index) => {
               return (
                 <li key={index}>
-                  <Link className={item.className} to={item.url}  onClick={this.linkClick}>
+                  <Link
+                    className={item.className}
+                    to={item.url}
+                    onClick={this.linkClick}
+                  >
                     {item.title}
-                   
                   </Link>
                 </li>
               );
@@ -113,6 +116,7 @@ class Navbar extends Component {
               <Link
                 className="nav-links log-in-out"
                 to={this.state.signedIn ? "/logout" : "/login"}
+                onClick={this.linkClick}
               >
                 {this.state.signedIn ? "LOGOUT" : "LOGIN"}
               </Link>
