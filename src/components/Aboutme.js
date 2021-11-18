@@ -26,9 +26,8 @@ class Aboutme extends Component {
 
   render() {
     const fade = document.querySelectorAll(".fade");
-    const appearedState = {
-      threshold: 0,
-      rootMargin: " 0px 0px -1000px 0px",
+    const options = {
+      rootMargin: '-1000%',
     };
     const appearOnScroll = new IntersectionObserver(function (fade, onScroll) {
       fade.forEach((fade) => {
@@ -39,7 +38,7 @@ class Aboutme extends Component {
           onScroll.unobserve(fade.target);
         }
       });
-    }, appearedState);
+    }, options);
 
     fade.forEach((fade) => {
       appearOnScroll.observe(fade);
