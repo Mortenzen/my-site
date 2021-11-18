@@ -12,7 +12,9 @@ class Presenter extends Component {
     var seter = this.props.presenterSeter;
 
     var colour = seter.bgcolor;
+    var contentcolor = seter.color;
     let styles = {
+      color: contentcolor, 
       backgroundColor: colour,
     };
 

@@ -60,7 +60,6 @@ class Signup extends Component {
         .then((res) => {
           result = res.data;
           if (result === "success") {
-            //PROBABLY INCORRECT !!!
             this.setState({
               name: "",
               email: "",
