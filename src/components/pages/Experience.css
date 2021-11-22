@@ -88,7 +88,7 @@
   place-items: center;
   text-align: center;
   color: rgb(0, 0, 0);
-  
+
   margin: 40px 20px 80px 20px;
   min-height: 30px;
   min-width: 200px;
@@ -100,7 +100,7 @@
   place-items: center;
   text-align: center;
   color: rgb(0, 0, 0);
- 
+
   margin: 40px 20px 80px 20px;
   min-height: 30px;
   min-width: 200px;
@@ -110,13 +110,13 @@
 .player-text h1 {
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   font-family: "Saira", sans-serif;
-  max-width: 700px;
+  max-width: 640px;
 }
 
 .player-text2 h1 {
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
   font-family: "Saira", sans-serif;
-  max-width: 700px;
+  max-width: 640px;
 }
 
 .react-player {
@@ -126,7 +126,8 @@
 }
 
 @media screen and (max-width: 301px) {
-  .reactplayer-wrapper {
+  .reactplayer-wrapper,
+  .reactplayer-wrapper2 {
     display: none;
   }
 }

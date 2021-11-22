@@ -38,8 +38,9 @@
 }
 
 .intro-h2 {
+  font-size: 20px;
   text-align: center;
-  font-family: "Saira", sans-serif;
+  font-family: Ubuntu, sans-serif;
   margin: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -187,12 +188,6 @@
   }
 }
 
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!
-.MuiPaper-root {
-  background-color: #f3f6f9;
-}
-*/
-
 .fade {
   opacity: 0;
   transition: opacity 250ms ease-ins;
@@ -242,7 +237,7 @@
 
 .info-1 {
   font-family: Ubuntu, sans-serif;
-  margin: 10px;
+  margin: 20px 10px 20px 10px;
   min-width: 400px;
   width: 45%;
   display: grid;

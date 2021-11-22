@@ -28,14 +28,17 @@ class Experience extends Component {
     };
     const presenterSeter2 = {
       title: "Indeveyes",
-      carouselItems: ["./Screenshot from 2021-11-12 15-54-00.png", "./Screenshotfrom2021-11-12 22-25-35.png"],
+      carouselItems: [
+        "./Screenshot from 2021-11-12 15-54-00.png",
+        "./Screenshotfrom2021-11-12 22-25-35.png",
+      ],
       intro1: "Indeveyes.com",
       content1:
         "They help industrial and manufacturing companies see and understand\
          the context of machine data in production. ",
       intro2: "WordPress template redesigne",
       content2:
-      "My task was to transform the template to follow the original design. Most of the work was CSS rewriting,HTML changes and adding a language switching option.",
+        "My task was to transform the template to follow the original design. Most of the work was CSS rewriting,HTML changes and adding a language switching option.",
       bgcolor: "#2c3e50",
       color: "#ffff",
     };
@@ -78,8 +81,8 @@ class Experience extends Component {
         <div className="reactplayer-wrapper2">
           <div className="player-text2">
             <h1>
-              In this video you will see the mobile application, the admin UI, the
-              ESP controllers during door opening requests.
+              In this video you will see the mobile application, the admin UI,
+              the ESP controllers during door opening requests.
             </h1>
           </div>
           <ReactPlayer
