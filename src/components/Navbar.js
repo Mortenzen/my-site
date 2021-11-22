@@ -29,9 +29,7 @@ class Navbar extends Component {
   }
 
   componentDidMount = () => {
-    //alert(localStorage.getItem("token"));
-    //alert(this.state.signedIn);
-
+    //Check if we are loged in.
     let temp = localStorage.getItem("token");
     if (!(temp === "null") && !(temp === null)) {
       this.setState({ signedIn: true });

@@ -13,9 +13,7 @@ class Aboutme extends Component {
   }
 
   componentDidMount = () => {
-    //alert(localStorage.getItem("token"));
-    //alert(this.state.signedIn);
-
+    //Check if loged in
     let temp = localStorage.getItem("token");
     if (!(temp === "null") && !(temp === null)) {
       this.setState({ signedIn: true });
@@ -25,9 +23,10 @@ class Aboutme extends Component {
   };
 
   render() {
+    //Animation
     const fade = document.querySelectorAll(".fade");
     const options = {
-      rootMargin: '-1000%',
+      rootMargin: "-1000%",
     };
     const appearOnScroll = new IntersectionObserver(function (fade, onScroll) {
       fade.forEach((fade) => {
@@ -51,11 +50,12 @@ class Aboutme extends Component {
             Hello, my name is Ramzi.
           </h1>
           <div className="intro-text">
-            <h2 className="intro-h2 fade-from-bot fade">
+            <p className="intro-h2 fade-from-bot fade">
               I am currently trying to start my career as a web developer. I
               created this website to provide a little extra information to my
-              CV.
-            </h2>
+              CV. Although I use component libraries most of the components were
+              made by me with HTML and CSS.
+            </p>
           </div>
           <div className="cards-wrapper fade-from-bot fade">
             <div className="card-wrapper">
@@ -95,15 +95,15 @@ class Aboutme extends Component {
           <div className="info-container">
             <div className="info-1">
               <p className="intro-p">
-                Although I use component libraries most of the components are
-                made by me with HTML and CSS. The back-end NodeJS application is
-                being rewritten right now. The updates will include the access
-                token and refresh token authentication method (now, I use only a
-                jwt token stored locally) and basic updates (server tells the
-                frontend when data is changed etc.) to have a properly
-                functioning application. As I finish the new features I will
-                share the Github repository. Now If you had time, you could also
-                use the signup/login option to try the todo-list.
+                There will be some changes that I am working on. The back-end
+                NodeJS application is being rewritten right now. The updates
+                will include the access token and refresh token authentication
+                method (now, I use only a jwt token stored locally) and basic
+                updates (server tells the frontend when data is changed etc.) to
+                have a properly functioning application. As I finish the new
+                features I will share the Github repository. Now If you had
+                time, you could also use the signup/login option to try the
+                todo-list.
               </p>
             </div>
             <div className="info-2">
