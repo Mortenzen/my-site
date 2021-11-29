@@ -11,15 +11,15 @@ class Experience extends Component {
 
   render() {
     const presenterSeter1 = {
-      title: "Robot X-Hungary Kft.",
+      title: "Robot-X Hungary Kft.",
       carouselItems: ["./robotx.jpg", "./IMG_1548.JPG", "./IMG_1689.JPG"],
       intro1: "Industrial Automation",
       content1:
-        "Robot X is engaged in industrial  automation as well as the design and construction\
+        "Robot-X is engaged in industrial  automation as well as the design and construction\
          of robot cells, assembly and production lines, and special-purpose machines.",
       intro2: "Robot/PLC programmer",
       content2:
-        "For more than a year I worked as a Robot/PLC programmer at the Robot X-Hungary Kft.\
+        "For more than a year I worked as a Robot/PLC programmer at the Robot-X Hungary Kft.\
          My duties included programming industrial robots, solving PLC programming tasks,\
         and project management responsibilities in various factories even abroad.\
         Robot programming: KUKA, Yaskawa,\
@@ -67,7 +67,7 @@ class Experience extends Component {
           <div className="player-text">
             <h1>
               In this video you will see a Yaskawa industrial robot that was
-              programmer by me.
+              programmed by me.
             </h1>
           </div>
           <ReactPlayer

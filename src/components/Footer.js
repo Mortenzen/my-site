@@ -28,23 +28,12 @@ function Footer() {
         <div className="footer-link-wrapper">
           <div class="footer-link-items">
             <h2>Social Media</h2>
-
-            <Link
-              class="social-icon-link facebook"
-              to="/"
-              target="_blank"
-              aria-label="Facebook"
-            >
+            <a href="https://www.facebook.com">
               <i class="fab fa-facebook-f" />
-            </Link>
-            <Link
-              class="social-icon-link twitter"
-              to="/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
+            </a>
+            <a href="https://www.linkedin.com/in/ramzi-nofal-914624156/">
               <i class="fab fa-linkedin" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
