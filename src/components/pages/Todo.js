@@ -116,7 +116,7 @@ class Todo extends Component {
         })
         .catch((error) => {
           console.log(error);
-          alert("You must be logged in :(");
+          //alert("You must be logged in :(");
         });
       myThis.setState({ newToDo: "" });
     }
